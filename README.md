@@ -1,6 +1,6 @@
-#Get started with local development
+# Get started with local development
 
-###Preliminary setup
+### Preliminary setup
 
 - Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
 - Install Vagrant: https://www.vagrantup.com/downloads.html
@@ -36,7 +36,7 @@
 
 ```docker-compose --version``` _this verifies that Docker Compose is installed properly_
 
-###Starting and stopping the local server resources
+### Starting and stopping the local server resources
 
 - Execute the following command to start up the local server resources
 
@@ -46,7 +46,7 @@
 
 ```sudo docker-compose down```
 
-###Common commands
+### Common commands
 
 - Reloading nginx (such as after updating a configuration file):
 
