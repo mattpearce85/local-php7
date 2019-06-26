@@ -40,6 +40,8 @@
 
 - Execute the following command to start up the local server resources
 
+```cd /vagrant```
+
 ```sudo docker-compose up -d```
 
 - Execute the following command to shut down the local server resources
