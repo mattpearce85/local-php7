@@ -1,10 +1,10 @@
 version: '3'
 services:
 
-  #PHP Service
-  app:
-    build: ./php
-    container_name: app
+  #PHP7 Service
+  php7:
+    build: ./php7
+    container_name: php7
     restart: unless-stopped
     tty: true
     environment:
@@ -18,9 +18,9 @@ services:
       - app-network
 
   #Nginx Service
-  webserver:
+  nginx:
     image: nginx:alpine
-    container_name: webserver
+    container_name: nginx
     restart: unless-stopped
     tty: true
     ports:
