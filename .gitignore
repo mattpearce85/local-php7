@@ -4,6 +4,7 @@
 
 /webroot/*
 !/webroot/php7/
+/webroot/php7/*
 !/webroot/php7/sample/*
 
 /mysql/mysql/*
