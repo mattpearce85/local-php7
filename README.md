@@ -42,7 +42,7 @@
 
 ```cd /vagrant```
 
-```sudo docker-compose up -d```
+```sudo docker-compose up -d``` _this will take a few minutes the first time..._
 
 - Execute the following command to shut down the local server resources
 
