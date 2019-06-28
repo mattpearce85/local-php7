@@ -52,13 +52,13 @@
 
 - Reloading nginx (such as after updating a configuration file):
 
-```sudo docker exec nginx sh``` _Start a shell prompt in the nginx service (must be ssh'd into vagrant)_
+```sudo docker exec -it nginx sh``` _Start a shell prompt in the nginx service (must be ssh'd into vagrant)_
 
 ```nginx -s reload``` _reloads nginx_
 
 - Start a shell prompt in the PHP7 service (must be ssh'd into vagrant):
 
-```sudo docker exec php7 bash```
+```sudo docker exec -it php7 bash```
 
 - Create a new laravel project (must be at the shell prompt in the PHP7 service)
 
