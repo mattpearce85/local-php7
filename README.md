@@ -60,4 +60,6 @@
 
 ```sudo docker exec php7 bash```
 
-composer create-project --prefer-dist laravel/laravel projectname
+- Create a new laravel project (must be at the shell prompt in the PHP7 service)
+
+```composer create-project --prefer-dist laravel/laravel projectname```
