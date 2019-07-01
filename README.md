@@ -10,9 +10,9 @@
 ### Preliminary setup
 
 - Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
-- - **If you're on Windows START VirtualBox AS ADMINISTRATOR**
+  - **If you're on Windows START VirtualBox AS ADMINISTRATOR**
 - Install Vagrant: https://www.vagrantup.com/downloads.html
-- - **If you're on Windows START Vagrant AS ADMINISTRATOR** i.e. run `vagrant up` in a shell that was started as administrator
+  - **If you're on Windows START Vagrant AS ADMINISTRATOR** i.e. run `vagrant up` in a shell that was started as administrator
 - Create a new directory where you want to handle local development (I'll use the tilde ("~") symbol to represent this directory going forward)
 - Clone the repo using the following command:
 
