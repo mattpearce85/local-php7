@@ -1,3 +1,10 @@
+# Training resources
+
+- [Official Laravel Documentation (v5.8)](https://laravel.com/docs/5.8)
+- [Laravel From Scratch - Video training series](https://laracasts.com/series/laravel-from-scratch-2018)
+- [Laravel Best Practices (mainly reference for naming conventions)](http://www.laravelbestpractices.com/)
+- [PHP Coding Style Guide (PSR-2)](https://www.php-fig.org/psr/psr-2/)
+
 # Get started with local development
 
 ### Preliminary setup
