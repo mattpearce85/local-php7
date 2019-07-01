@@ -84,6 +84,10 @@
 
 ```npm run dev``` _this generates flattened versions of your CSS and JS_
 
+- Back out of the PHP7 container
+
+```exit```
+
 - Create a new nginx configuration file so your browser knows how to find the new Laravel app
 
 ```touch /vagrant/nginx/sites-enabled/projectname```
