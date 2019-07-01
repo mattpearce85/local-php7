@@ -80,11 +80,8 @@
 ```touch /vagrant/nginx/sites-enabled/projectname```
 
 - Use your local IDE to open the new configuration file, it will be located where you cloned the repo under `~/nginx/sites-enabled/projectname`
-
 - Copy the contents of another nginx configuration file into your new file, maybe use `laravel-standard` as an example
-
 - Edit the contents of your new configuration file so that `server_name` points to something like `projectname.localhost` and `root` points to something like `/var/www/html/php7/projectname/public/`
-
 - Execute the following commands to reload the nginx configuration:
 
 ```sudo docker exec -it nginx sh``` _Start a shell prompt in the nginx service (must be ssh'd into vagrant)_
@@ -93,32 +90,19 @@
 
 - Open the site in your browser by visiting ```http://projectname.localhost```
 
-- You can now 
-
 ### Creating a MySQL database for your Laravel application
 
 - Make sure your servers are running and then open your browser to ```http://pma.localhost```
-
 - Login using the username `root` and the password `mysqltemp`
-
 - If you're not already at the phpMyAdmin dashboard, click the logo
-
 - Click the `User Accounts` tab at the top
-
 - Click the `Add user account` tab midway down the page
-
 - Set `User name` equal to your project name and click the `Generate` button to get a password.
-
 - Copy the password to notepad or something, we'll need it next
-
 - Check the box for `Create database with same name and grant all privileges.`
-
 - Scroll down and click the `Go` button in the bottom-right corner
-
 - The database is now ready, lets add the new credentials to the Laravel settings file. In your local IDE open the `.env` file for your project. It will be something like `~/nginx/sites-enabled/projectname/.env` (you might have to show hidden files to see it)
-
 - In the `.env` file set `DB_DATABASE` and `DB_USERNAME` equal to the MySQL database name you just created like projectname, and paste in the password you generated a minute ago in phpMyAdmin
-
 - All done, your application will now use the new database.
 
 ### Common commands
