@@ -68,7 +68,7 @@
 
 - Navigate to the webroot for php7 code:
 
-```cd /vagrant/webroot/php7/```
+```cd /var/www/html/php7```
 
 - Create the new laravel project
 
