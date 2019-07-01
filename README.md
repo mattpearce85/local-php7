@@ -58,6 +58,8 @@
 
 ```sudo docker-compose down```
 
+# Working with Laravel
+
 ### Creating a new Laravel application
 
 - Start a shell prompt in the PHP7 service (must be ssh'd into vagrant):
@@ -112,14 +114,34 @@
 - In the `.env` file set `DB_DATABASE` and `DB_USERNAME` equal to the MySQL database name you just created like projectname, and paste in the password you generated a minute ago in phpMyAdmin
 - All done, your application will now use the new database.
 
-### Common commands
+### Laravel-specific commands
+
+- Getting to the a command line for your project
+
+```sudo docker exec -it php7 bash``` _start a shell prompt in the PHP7 service (must be ssh'd into vagrant)_
+
+- Change to your projects directory, it will be something like:
+
+```cd /vagrant/webroot/php7/projectname```
+
+- Compile CSS and JS assets
+
+```npm run dev``` _one-off compilation of assets_
+
+```npm run watch``` _watch for when files change and auto-compile assets_
+
+- Scaffolding of authorization feature
+
+```php artisan make:auth``` _creates Laravel code needed for auth_
+
+```php artisan migrate``` _runs any outstanding database migration scripts, in this case creating the "users" and "password_resets" tables```
+
+# Other stuff
+
+### Server-related commands
 
 - Reloading nginx (such as after updating a configuration file):
 
 ```sudo docker exec -it nginx sh``` _Start a shell prompt in the nginx service (must be ssh'd into vagrant)_
 
 ```nginx -s reload``` _reloads nginx_
-
-- Start a shell prompt in the PHP7 service (must be ssh'd into vagrant):
-
-```sudo docker exec -it php7 bash```
