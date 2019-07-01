@@ -4,8 +4,11 @@
 
 - Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
 - Install Vagrant: https://www.vagrantup.com/downloads.html
-- Navigate to a directory where you want to handle local development
-- Clone the repo
+- Create a new directory where you want to handle local development
+- Clone the repo using the following command:
+
+```git clone https://github.com/mattpearce85/local-php7.git .```
+
 - Open a command line in your new directory and execute the following commands:
 
 ```vagrant up``` _this will take a few minutes the first time..._
