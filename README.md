@@ -117,7 +117,7 @@
 - Check the box for `Create database with same name and grant all privileges.`
 - Scroll down and click the `Go` button in the bottom-right corner
 - The database is now ready, lets add the new credentials to the Laravel settings file. In your local IDE open the `.env` file for your project. It will be something like `~/webroot/php7/projectname/.env` (you might have to show hidden files to see it)
-- In the `.env` file set `DB_DATABASE` and `DB_USERNAME` equal to the MySQL database name you just created like projectname, and paste in the password you generated a minute ago in phpMyAdmin
+- In the `.env` file set `DB_DATABASE` and `DB_USERNAME` equal to the MySQL database name you just created like projectname, and paste in the password you generated a minute ago in phpMyAdmin. Also, set `DB_HOST` equal to `mysql`, that's the name of the docker service running MySQL.
 - All done, your application will now use the new database.
 
 ### Laravel-specific commands
