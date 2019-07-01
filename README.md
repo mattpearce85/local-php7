@@ -128,13 +128,15 @@
 
 - Change to your projects directory, it will be something like:
 
-```cd /vagrant/webroot/php7/projectname```
+```cd /var/www/html/php7/projectname```
 
-- Compile CSS and JS assets
+- Compile CSS and JS assets one time
 
-```npm run dev``` _one-off compilation of assets_
+```npm run dev```
 
-```npm run watch``` _watch for when files change and auto-compile assets_
+- Watch CSS and JS files for changes, and then auto-compile them
+
+```npm run watch``` _press ctrl+c to stop watching for changes_
 
 - Scaffolding of authorization feature
 
