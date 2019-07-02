@@ -63,6 +63,33 @@ Note: The video training series will help you do things like installing PHP and 
 
 ```sudo docker-compose down```
 
+# Working with plain PHP
+
+### Running PHP in the command line
+
+- Make sure your local server resources are running using the docker-compose command above
+- If you're not ssh'd into vagrant, open a command line where you cloned the repo and run the following command:
+
+```vagrant ssh```
+
+- Now you're logged into the vagrant virtual machine, but PHP7 is running within Docker container on our virtual machine, so we need to run another command to get to the command line _inside_ the PHP7 Docker container. It's like command line Inception!
+
+```sudo docker exec -it php7 bash```
+
+- Now we've jumped into the virtual machine, and jumped deeper still into the PHP7 Docker container. We should be ready to run PHP scripts from the command-line. For example, execute the following command to run our plain PHP file:
+
+```php php7/plain-php/index.php```
+
+- This command runs the PHP compiler on the specified file. In this case, the file just outputs some HTML code. The command line doesn't interpret HTML, so it's just plain text. How about running it in a web browser?
+
+### Running PHP in the web browser
+
+- Make sure your local server resources are running using the docker-compose command above
+- Open your web browser to `http://plain-php.localhost/index.php`
+- Let's edit that PHP code... Open the following file from the cloned repo in your IDE or a text editor. It will be somewhere like: `~/webroot/php7/plain-php/index.php` 
+- Make some changes, save the file, and then refresh your web browser. Do you see your changes? Good!
+- Now it's time to start learning PHP. Check out the [PHP video training series](https://laracasts.com/series/php-for-beginners)
+
 # Working with Laravel
 
 ### Creating a new Laravel application
@@ -122,8 +149,9 @@ Note: The video training series will help you do things like installing PHP and 
 - The database is now ready, lets add the new credentials to the Laravel settings file. In your local IDE open the `.env` file for your project. It will be something like `~/webroot/php7/projectname/.env` (you might have to show hidden files to see it)
 - In the `.env` file set `DB_DATABASE` and `DB_USERNAME` equal to the MySQL database name you just created like projectname, and paste in the password you generated a minute ago in phpMyAdmin. Also, set `DB_HOST` equal to `mysql`, that's the name of the docker service running MySQL.
 - All done, your application will now use the new database.
+- Now it's time to start learning Laravel. Check out the [Laravel video training series](https://laracasts.com/series/laravel-from-scratch-2018)
 
-### Laravel-specific commands
+### Some Laravel-specific commands you'll use regularly
 
 - Getting to the a command line for your project
 
@@ -149,7 +177,7 @@ Note: The video training series will help you do things like installing PHP and 
 
 # Other stuff
 
-### Server-related commands
+### Server-related commands you might need
 
 - Reloading nginx (such as after updating a configuration file):
 
