@@ -1,9 +1,13 @@
 # Training resources
 
-- [Official Laravel Documentation (v5.8)](https://laravel.com/docs/5.8)
-- [Laravel From Scratch - Video training series](https://laracasts.com/series/laravel-from-scratch-2018)
-- [Laravel Best Practices (mainly reference for naming conventions)](http://www.laravelbestpractices.com/)
+Note: The video training series will help you do things like installing PHP and Laravel. The instructions below will take care of all that. HOWEVER the training videos do a much better job explaining how these commands work and why we're using them. I strongly recommend watching the full video series instead of skipping the parts you think are already done.
+
+- [PHP video training series](https://laracasts.com/series/php-for-beginners)
 - [PHP Coding Style Guide (PSR-2)](https://www.php-fig.org/psr/psr-2/)
+
+- [Laravel video training series](https://laracasts.com/series/laravel-from-scratch-2018)
+- [Official Laravel Documentation (v5.8)](https://laravel.com/docs/5.8)
+- [Laravel Best Practices (mainly reference for naming conventions)](http://www.laravelbestpractices.com/)
 
 # Get started with local development
 
