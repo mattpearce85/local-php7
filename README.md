@@ -67,7 +67,7 @@ Note: The video training series will help you do things like installing PHP and 
 
 ### Running PHP in the command line
 
-- Make sure your local server resources are running using the docker-compose command above
+- Make sure your local server resources are running using the `docker-compose` command above
 - If you're not ssh'd into vagrant, open a command line where you cloned the repo and run the following command:
 
 ```vagrant ssh```
