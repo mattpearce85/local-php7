@@ -4,7 +4,6 @@ Note: The video training series will help you do things like installing PHP and 
 
 - [PHP video training series](https://laracasts.com/series/php-for-beginners)
 - [PHP Coding Style Guide (PSR-2)](https://www.php-fig.org/psr/psr-2/)
-
 - [Laravel video training series](https://laracasts.com/series/laravel-from-scratch-2018)
 - [Official Laravel Documentation (v5.8)](https://laravel.com/docs/5.8)
 - [Laravel Best Practices (mainly reference for naming conventions)](http://www.laravelbestpractices.com/)
