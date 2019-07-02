@@ -17,15 +17,16 @@ Note: The video training series will help you do things like installing PHP and 
 - Install Vagrant: https://www.vagrantup.com/downloads.html
   - **If you're on Windows START Vagrant AS ADMINISTRATOR** i.e. run `vagrant up` in a shell that was started as administrator
 - Create a new directory where you want to handle local development (I'll use the tilde ("~") symbol to represent this directory going forward)
+- Open a command line at that new directory (the one we're calling "~").
 - Clone the repo using the following command:
 
-```git clone https://github.com/mattpearce85/local-php7.git .```
+```git clone https://github.com/mattpearce85/local-php7.git .``` _you can download Git here if you don't already have it: https://git-scm.com/downloads_
 
-- Open a command line in your new directory and execute the following commands:
+- Now that we have the local environment repository on our machine we can execute the following commands:
 
 ```vagrant up``` _this will take a few minutes the first time..._
 
-```vagrant ssh```
+```vagrant ssh``` _this opens an ssh command line within the virtual machine_
 
 - Once ssh'd into the virtual machine, execute the following commands to install Docker:
 
@@ -53,13 +54,13 @@ Note: The video training series will help you do things like installing PHP and 
 
 ### Starting and stopping the local server resources
 
-- Execute the following command to start up the local server resources
+- Execute the following commands to start up the local server resources
 
 ```cd /vagrant``` _/vagrant is mapped to the directory you ran "vagrant up" in (aka "~"), it also houses your web root and everything else_
 
 ```sudo docker-compose up -d``` _this will take a few minutes the first time..._
 
-- Execute the following command to shut down the local server resources
+- If you want to shut down the local server resources, execute the following command
 
 ```sudo docker-compose down```
 
