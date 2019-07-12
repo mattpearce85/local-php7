@@ -30,8 +30,12 @@ services:
       - ./webroot:/var/www/html
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/sites-enabled:/etc/nginx/sites-enabled
+    depends_on:
+      - php7
     networks:
-      - app-network
+      app-network:
+        aliases:
+          - api.localhost
 
   #MySQL Service
   mysql:
@@ -62,6 +66,40 @@ services:
       - "9001:80"
     environment:
       PMA_HOST: mysql
+    networks:
+      - app-network
+
+  #Swagger Editor Service
+  swagger-editor:
+    image: swaggerapi/swagger-editor
+    container_name: "swagger-editor"
+    ports:
+      - "9002:8080"
+    networks:
+      - app-network
+
+  #Swagger UI Service
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    container_name: "swagger-ui"
+    ports:
+      - "9003:8080"
+    volumes:
+      - ./swagger/openapi.json:/openapi.json
+    environment:
+      SWAGGER_JSON: /openapi.json
+    networks:
+      - app-network
+
+  #API Sprout Service
+  swagger-api:
+    image: danielgtaylor/apisprout
+    container_name: "swagger-api"
+    ports:
+      - "9004:8000"
+    volumes:
+      - ./swagger/openapi.json:/openapi.json
+    command: /openapi.json
     networks:
       - app-network
 

@@ -4,9 +4,14 @@ Note: The video training series will help you do things like installing PHP and 
 
 - [PHP video training series](https://laracasts.com/series/php-for-beginners)
 - [PHP Coding Style Guide (PSR-2)](https://www.php-fig.org/psr/psr-2/)
+
+
 - [Laravel video training series](https://laracasts.com/series/laravel-from-scratch-2018)
 - [Official Laravel Documentation (v5.8)](https://laravel.com/docs/5.8)
 - [Laravel Best Practices (mainly reference for naming conventions)](http://www.laravelbestpractices.com/)
+
+
+- [OpenAPI 3.0 Tutorial](https://app.swaggerhub.com/help/tutorials/openapi-3-tutorial)
 
 # Get started with local development
 
@@ -185,3 +190,26 @@ Note: The video training series will help you do things like installing PHP and 
 ```sudo docker exec -it nginx sh``` _Start a shell prompt in the nginx service (must be ssh'd into vagrant)_
 
 ```nginx -s reload``` _reloads nginx_
+
+- Restarting the local server resources (such as after doing a `git pull` on this repo):
+
+```sudo docker-compose down```
+
+```sudo docker-compose up -d```
+
+# Working with Swagger
+
+### Using Swagger UI to view API documentation
+
+- Make sure the local server resources are running
+- Open your web browser to `http://swagger-ui.localhost/`
+- That's it! Use this to play around with the API example in this repo
+- By default it loads the documentation saved at `~/swagger/openapi.json`
+
+### Using Swagger Editor to edit API documentation
+
+- Make sure the local server resources are running
+- Open your web browser to `http://swagger-editor.localhost/`
+- This shows you the YAML editor on the left, and a live-reloading version of Swagger UI on the right
+- By default it loads the documentation saved at `~/swagger/openapi.json` but you can import another file if you want
+- Now it's time to learn how to write the YAML and make API documentation! Here's an up-to-date tutorial: [OpenAPI 3.0 Tutorial](https://app.swaggerhub.com/help/tutorials/openapi-3-tutorial)
