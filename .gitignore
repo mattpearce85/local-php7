@@ -3,6 +3,10 @@
 /ubuntu-bionic-18.04-cloudimg-console.log
 
 /webroot/*
+!/webroot/perl/plain-perl/
+!/webroot/perl/plain-perl/*
+!/webroot/perl/sample/
+!/webroot/perl/sample/*
 !/webroot/php7/plain-php/
 !/webroot/php7/plain-php/*
 !/webroot/php7/sample/
