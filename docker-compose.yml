@@ -17,6 +17,21 @@ services:
     networks:
       - app-network
 
+  #Perl Service
+  perl:
+    build: ./perl
+    container_name: perl
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: perl
+      SERVICE_TAGS: dev
+    working_dir: /var/www/html
+    volumes:
+      - ./webroot/perl:/var/www/html/perl
+    networks:
+      - app-network
+
   #Nginx Service
   nginx:
     image: nginx:alpine
