@@ -1,0 +1,25 @@
+server {
+        listen 443 ssl;
+
+        server_name dev.localhost;
+        ssl_certificate /usr/local/nginx/conf/ssl/server.crt;
+        ssl_certificate_key /usr/local/nginx/conf/ssl/server.key;
+        ssl_protocols  SSLv3 TLSv1;
+        ssl_ciphers  ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv3:+EXP;
+        ssl_prefer_server_ciphers   on;
+
+        root /var/www/html/perl/;
+        index index.html index.htm index.pl index.cgi;
+
+        fastcgi_buffers 8 16k;
+        fastcgi_buffer_size 32k;
+        fastcgi_read_timeout 180;
+
+        location ~ \.pl|cgi|pm$ {
+            fastcgi_pass perl:9000;
+            fastcgi_index index.pl;
+            include fastcgi_params;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            fastcgi_param SERVER_NAME $server_name;
+        }
+}
