@@ -11,11 +11,11 @@
 !/webroot/perl/sample/
 !/webroot/perl/sample/*
 
-!/webroot/php7/
-/webroot/php7/*
-!/webroot/php7/plain-php/
-!/webroot/php7/plain-php/*
-!/webroot/php7/sample/
-!/webroot/php7/sample/*
+!/webroot/php8/
+/webroot/php8/*
+!/webroot/php8/plain-php/
+!/webroot/php8/plain-php/*
+!/webroot/php8/sample/
+!/webroot/php8/sample/*
 
 /mysql/mysql/*
