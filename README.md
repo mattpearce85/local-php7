@@ -102,11 +102,11 @@ Note: The video training series will help you do things like installing PHP and 
 
 - Now you're logged into the vagrant virtual machine, but PHP7 is running within Docker container on our virtual machine, so we need to run another command to get to the command line _inside_ the PHP7 Docker container. It's like command line Inception!
 
-```sudo docker exec -it php7 bash```
+```sudo docker exec -it php8 bash```
 
 - Now we've jumped into the virtual machine, and jumped deeper still into the PHP7 Docker container. We should be ready to run PHP scripts from the command-line. For example, execute the following command to run our plain PHP file:
 
-```php php7/plain-php/index.php```
+```php php8/plain-php/index.php```
 
 - This command runs the PHP compiler on the specified file. In this case, the file just outputs some HTML code. The command line doesn't interpret HTML, so it's just plain text. How about running it in a web browser?
 
@@ -114,7 +114,7 @@ Note: The video training series will help you do things like installing PHP and 
 
 - Make sure your local server resources are running using the docker-compose command above
 - Open your web browser to `http://plain-php.localhost/index.php`
-- Let's edit that PHP code... Open the following file from the cloned repo in your IDE or a text editor. It will be somewhere like: `~/webroot/php7/plain-php/index.php` 
+- Let's edit that PHP code... Open the following file from the cloned repo in your IDE or a text editor. It will be somewhere like: `~/webroot/php8/plain-php/index.php` 
 - Make some changes, save the file, and then refresh your web browser. Do you see your changes? Good!
 - Now it's time to start learning PHP. Check out the [PHP video training series](https://laracasts.com/series/php-for-beginners)
 
@@ -124,11 +124,11 @@ Note: The video training series will help you do things like installing PHP and 
 
 - Start a shell prompt in the PHP7 service (must be ssh'd into vagrant):
 
-```sudo docker exec -it php7 bash```
+```sudo docker exec -it php8 bash```
 
-- Navigate to the webroot for php7 code:
+- Navigate to the webroot for php8 code:
 
-```cd /var/www/html/php7```
+```cd /var/www/html/php8```
 
 - Create the new laravel project
 
@@ -154,7 +154,7 @@ Note: The video training series will help you do things like installing PHP and 
 
 - Use your local IDE to open the new configuration file, it will be located where you cloned the repo under `~/nginx/sites-enabled/projectname`
 - Copy the contents of another nginx configuration file into your new file, maybe use `laravel-standard` as an example
-- Edit the contents of your new configuration file so that `server_name` points to something like `projectname.localhost` and `root` points to something like `/var/www/html/php7/projectname/public/`
+- Edit the contents of your new configuration file so that `server_name` points to something like `projectname.localhost` and `root` points to something like `/var/www/html/php8/projectname/public/`
 - Execute the following commands to reload the nginx configuration:
 
 ```sudo docker exec -it nginx sh``` _Start a shell prompt in the nginx service (must be ssh'd into vagrant)_
@@ -174,7 +174,7 @@ Note: The video training series will help you do things like installing PHP and 
 - Copy the password to notepad or something, we'll need it next
 - Check the box for `Create database with same name and grant all privileges.`
 - Scroll down and click the `Go` button in the bottom-right corner
-- The database is now ready, lets add the new credentials to the Laravel settings file. In your local IDE open the `.env` file for your project. It will be something like `~/webroot/php7/projectname/.env` (you might have to show hidden files to see it)
+- The database is now ready, lets add the new credentials to the Laravel settings file. In your local IDE open the `.env` file for your project. It will be something like `~/webroot/php8/projectname/.env` (you might have to show hidden files to see it)
 - In the `.env` file set `DB_DATABASE` and `DB_USERNAME` equal to the MySQL database name you just created like projectname, and paste in the password you generated a minute ago in phpMyAdmin. Also, set `DB_HOST` equal to `mysql`, that's the name of the docker service running MySQL.
 - All done, your application will now use the new database.
 - Now it's time to start learning Laravel. Check out the [Laravel video training series](https://laracasts.com/series/laravel-from-scratch-2018)
@@ -183,11 +183,11 @@ Note: The video training series will help you do things like installing PHP and 
 
 - Getting to the a command line for your project
 
-```sudo docker exec -it php7 bash``` _start a shell prompt in the PHP7 service (must be ssh'd into vagrant)_
+```sudo docker exec -it php8 bash``` _start a shell prompt in the PHP7 service (must be ssh'd into vagrant)_
 
 - Change to your projects directory, it will be something like:
 
-```cd /var/www/html/php7/projectname```
+```cd /var/www/html/php8/projectname```
 
 - Compile CSS and JS assets one time
 

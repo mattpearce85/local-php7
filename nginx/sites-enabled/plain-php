@@ -3,7 +3,7 @@ server {
 
         server_name plain-php.localhost;
 
-        root /var/www/html/php7/plain-php/;
+        root /var/www/html/php8/plain-php/;
         index index.php index.html index.htm default.html default.htm;
 
         fastcgi_buffers 8 16k;
@@ -11,7 +11,7 @@ server {
         fastcgi_read_timeout 180;
 
         location ~ \.php$ {
-            fastcgi_pass php7:9000;
+            fastcgi_pass php8:9000;
             fastcgi_index index.php;
             include fastcgi_params;
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;

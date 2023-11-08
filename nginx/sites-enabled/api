@@ -3,7 +3,7 @@ server {
 
         server_name api.localhost;
 
-        root /var/www/html/php7/api/public/;
+        root /var/www/html/php8/api/public/;
         index index.php index.html index.htm default.html default.htm;
 
         fastcgi_buffers 8 16k;
@@ -15,7 +15,7 @@ server {
         }
 
         location ~ \.php$ {
-            fastcgi_pass php7:9000;
+            fastcgi_pass php8:9000;
             fastcgi_index index.php;
             include fastcgi_params;
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
